@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Silkscreen', cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #05191a;
+  color: #96c6af;
+}
+
+.contenedor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  background: #284b5d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#cortina {
+  display: none;
+}
+
+#cortina.cortina {
+  display: flex;
+}
+
+.contenedor .legend {
+  width: 100%;
+  max-width: 60vmin;
+}
+
+.legend p {
+  font-size: .7rem;
+  padding: .25rem;
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.contenedor .cortina {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: .5rem;
+  background: #0002;
+  backdrop-filter: blur(2px);
+}
+
+.contenedor .score-board {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.contenedor .play-area {
+  display: grid;
+  background: #4d9699;
+  width: 60vmin;
+  height: 60vmin;
+  grid-template: repeat(30, 1fr)/repeat(30, 1fr);
+}
+
+.contenedor .controls {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: .5rem;
+  gap: .5rem;
+}
+
+.controls-container {
+  display: flex;
+  gap: .5rem;
+}
+
+.controls-container i {
+  background-color: #05191a;
+  padding: .6rem .7rem;
+  border-radius: 5px;
+}
+
+.play-area .fruit {
+  background-color: rgb(255, 80, 80);
+  border-radius: 50%;
+}
+
+.play-area .head {
+  background: #dae0cd;
+}
+
+@media screen and (max-width: 800px) {
+  .contenedor .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: .5rem;
+    gap: .5rem;
+  }
+
+  .contenedor .score-board {
+    flex-direction: column;
+  }
+}
